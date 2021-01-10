@@ -1,0 +1,94 @@
+
+
+/*static variables belongs to class and that should be global, you can use static keyword with local Variables
+*/
+
+class Demo{
+
+		static int x = 10 ;
+		
+		int m = 25 ;
+		
+		
+		// non static method can access both static and non-satic variable directly
+		
+		void getValue(){
+		
+		System.out.println("Value of static variable\t"+x);
+		
+		System.out.println("Value of Instance Variable \t"+m);
+		
+		
+		System.out.println("\n------- end of non static method -------------\n");
+		
+		
+		
+		}
+		
+		/* static method can access only static variable directly*/
+		
+		static void showValue(){
+		
+		System.out.println("Value of static variable\t"+x);
+		
+		/*System.out.println("Value of Instance Variable \t"+m);   non-static variable m cannot be referenced from a static context*/
+		
+		/* sln:- u need to creat object of class in static method for access of instance var */
+		
+		Demo ob = new Demo();
+		
+		System.out.println("Value of Instance variable\t"+ ob.m);
+		
+		
+		}
+		
+
+	public static void main(String arg[]){
+	
+	
+			//static int y = 20 ; error: illegal start of expression
+			
+
+			Demo obj = new Demo();
+			
+			obj.getValue();
+			
+			// U can call static method using both object & class name 
+			
+			obj.showValue();
+			
+			Demo.showValue();
+			
+			
+			System.out.println("\n-------------\n");
+			
+			
+			Demo obj1 = new Demo();
+			
+			System.out.println("value of m  "+obj1.m +" value of x "+x); 
+			
+			obj1.m = 100000;
+			
+			x = 5000000 ;
+			
+			
+			System.out.println("value of m  "+obj1.m +" value of x "+x); 
+			
+			Demo obj2 = new Demo() ;
+			
+			System.out.println("value of m  "+obj2.m +" value of x "+x); 
+			
+			// value of m  25 value of x 5000000
+
+			//static var share same copy to every object
+			
+			// intance var occupy new space in every object and reinitialize the value
+			
+			
+	
+	}
+
+
+
+
+}
