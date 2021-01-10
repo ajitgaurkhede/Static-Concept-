@@ -53,7 +53,7 @@ class Demo{
 			
 			obj.getValue();
 			
-			// U can call static method using both object & class name 
+			// U can call static method using both object & class name & also directly
 			
 			obj.showValue();
 			
@@ -83,6 +83,8 @@ class Demo{
 			//static var share same copy to every object
 			
 			// intance var occupy new space in every object and reinitialize the value
+			
+			showValue() ; // tatic method call directly
 			
 			
 	
