@@ -84,7 +84,7 @@ class Demo{
 			
 			// intance var occupy new space in every object and reinitialize the value
 			
-			showValue() ; // tatic method call directly
+			showValue() ; // static method call directly
 			
 			
 	
