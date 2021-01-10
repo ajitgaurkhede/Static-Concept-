@@ -1,6 +1,6 @@
 
 
-/*static variables belongs to class and that should be global, you can use static keyword with local Variables
+/*static variables belongs to class and that should be global, you can not use static keyword with local Variables
 */
 
 class Demo{
